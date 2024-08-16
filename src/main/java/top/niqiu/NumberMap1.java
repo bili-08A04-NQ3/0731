@@ -20,6 +20,15 @@ public class NumberMap1 {
             button.setVisible(true);
             int finalI = i;
             button.addActionListener(e -> {
+                if (buttons[finalI].getBackground().equals(Main.cr)) {
+                    buttons[finalI].setBackground(Color.CYAN);
+                    button.setForeground(Color.LIGHT_GRAY);
+                    numberMap9.numberMap81.flush();
+
+                    ((JTextField) this.numberMap9.displayPanel.getComponent(finalI)).setText("");
+                    return;
+                }
+
                 buttons[finalI].setBackground(Main.cr);
                 numberMap9.numberMap81.setNumber(numberMap9.index, index, finalI + 1);
                 button.setForeground(Color.BLACK);

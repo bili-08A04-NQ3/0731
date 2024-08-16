@@ -13,7 +13,7 @@ public class Main {
         NumberMap81 numberMap81 = new NumberMap81();
 
         JFrame displayFrame = new JFrame();
-        displayFrame.setTitle("输入");
+        displayFrame.setTitle("输入-[只读]");
         displayFrame.setContentPane(numberMap81.displayPanel);
         displayFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         displayFrame.setSize(600, 600);
@@ -28,7 +28,7 @@ public class Main {
             numberMap81.flush();
         });
 
-        JButton button1 = new JButton("计算");
+        JButton button1 = new JButton("操作");
         button1.addActionListener(e -> {
                 for (int x = 0; x < 9; x++) {
                     for (int y = 0; y < 9; y++) {
